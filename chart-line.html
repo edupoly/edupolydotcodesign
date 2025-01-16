@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Comparison</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .chart-container {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Salary Comparison for ReactJS, Angular, Java, Python, and .NET (Last 5 Years)</h1>
+    <div class="chart-container">
+        <canvas id="linechart"></canvas>
+    </div>
+
+    <script>
+        const ctx3 = document.getElementById('linechart').getContext('2d');
+
+        // Data for the chart
+        const years3 = ['2020', '2021', '2022', '2023','2024'];
+        const salaryData3 = {
+            ReactJS: [30000, 55000, 60000, 65000, 100000],
+            Angular: [38000, 42000, 50000, 43000, 78000],
+            Java: [25000, 38000, 39000, 47000, 52000],
+            Python: [13000, 33000, 41000, 46000, 59000],
+            ".NET": [9000, 3000, 19000, 64000, 69000]
+        };
+
+        // Creating the line chart
+        new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: years3,
+                datasets: [
+                    {
+                        label: 'ReactJS',
+                        data: salaryData3.ReactJS,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Angular',
+                        data: salaryData3.Angular,
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Java',
+                        data: salaryData3.Java,
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Python',
+                        data: salaryData3.Python,
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        tension: 0.4
+                    },
+                    {
+                        label: '.NET',
+                        data: salaryData3[".NET"],
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.dataset.label}: $${context.raw}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Salary (USD)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

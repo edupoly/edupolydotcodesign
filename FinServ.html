@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinServe Loan Management Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chart.js for graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">FinServe Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <!-- Loan Summary Cards -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card text-white bg-info">
+                    <div class="card-body">
+                        <h5 class="card-title">Loans In Progress</h5>
+                        <p class="card-text h2">150</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-warning">
+                    <div class="card-body">
+                        <h5 class="card-title">Pending Loans</h5>
+                        <p class="card-text h2">45</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-danger">
+                    <div class="card-body">
+                        <h5 class="card-title">Outstanding Amount</h5>
+                        <p class="card-text h2">$1.2M</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-success">
+                    <div class="card-body">
+                        <h5 class="card-title">Monthly Interest</h5>
+                        <p class="card-text h2">$250K</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graphs Section -->
+        <div class="row">
+            <!-- Monthly Interest Collection Graph -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Monthly Interest Collection</h5>
+                        <canvas id="monthlyInterestGraph"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agents Performance Graph -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Agents Performance</h5>
+                        <canvas id="agentsPerformanceGraph"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Area-wise Collection and Rating -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Area-wise Collection & Ratings</h5>
+                        <canvas id="areaCollectionGraph"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js Configurations -->
+    <script>
+        // Monthly Interest Collection Graph
+        const monthlyInterestCtx = document.getElementById('monthlyInterestGraph').getContext('2d');
+        new Chart(monthlyInterestCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Monthly Interest ($)',
+                    data: [20000, 22000, 25000, 24000, 26000, 27000, 28000, 29000, 31000, 32000, 34000, 35000],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Agents Performance Graph
+        const agentsPerformanceCtx = document.getElementById('agentsPerformanceGraph').getContext('2d');
+        new Chart(agentsPerformanceCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Agent A', 'Agent B', 'Agent C', 'Agent D'],
+                datasets: [{
+                    label: 'Loans Processed',
+                    data: [50, 75, 30, 90],
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Area-wise Collection Graph
+        const areaCollectionCtx = document.getElementById('areaCollectionGraph').getContext('2d');
+        new Chart(areaCollectionCtx, {
+            type: 'pie',
+            data: {
+                labels: ['North', 'South', 'East', 'West'],
+                datasets: [{
+                    label: 'Area-wise Collection',
+                    data: [40000, 30000, 20000, 10000],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>

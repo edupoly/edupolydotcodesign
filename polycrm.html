@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyCRM Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+
+        }
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #343a40;
+            color: white;
+            width: 250px;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width:100%;
+        }
+        .card-metric {
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3 class="text-center">PolyCRM</h3>
+        <hr class="border border-primary border-3 opacity-75">
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Leads</a>
+            <a href="#">Opportunities</a>
+            <a href="#">Accounts</a>
+            <a href="#">Contacts</a>
+            <a href="#">Reports</a>
+            <a href="#">Employee Performance</a>
+            <a href="#">Settings</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Dashboard</h1>
+            <button class="btn btn-primary">Add New Lead</button>
+        </header>
+
+        <!-- Metrics Row -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card card-metric shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Leads</h5>
+                        <h2 class="card-text">1,024</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-metric shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Opportunities</h5>
+                        <h2 class="card-text">532</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-metric shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Closed Deals</h5>
+                        <h2 class="card-text">245</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-metric shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Revenue</h5>
+                        <h2 class="card-text">$1.2M</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Employee Performance Section -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card shadow-sm">
+                    <div class="card-header">Employee Performance</div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Employee</th>
+                                    <th>Role</th>
+                                    <th>Leads Closed</th>
+                                    <th>Revenue Generated</th>
+                                    <th>Performance Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jane Doe</td>
+                                    <td>Sales Manager</td>
+                                    <td>120</td>
+                                    <td>$450K</td>
+                                    <td>⭐️⭐️⭐️⭐️⭐️</td>
+                                </tr>
+                                <tr>
+                                    <td>John Smith</td>
+                                    <td>Account Executive</td>
+                                    <td>85</td>
+                                    <td>$320K</td>
+                                    <td>⭐️⭐️⭐️⭐️</td>
+                                </tr>
+                                <tr>
+                                    <td>Mary Johnson</td>
+                                    <td>Business Development</td>
+                                    <td>90</td>
+                                    <td>$280K</td>
+                                    <td>⭐️⭐️⭐️⭐️⭐️</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts and Tables -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header">Recent Activities</div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Activity</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024-12-26</td>
+                                    <td>Called Lead X</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-12-25</td>
+                                    <td>Meeting with Client Y</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-12-24</td>
+                                    <td>Email Campaign</td>
+                                    <td>Completed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header">Tasks</div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Follow up with Lead A</li>
+                            <li class="list-group-item">Prepare proposal for Client B</li>
+                            <li class="list-group-item">Schedule meeting with Team C</li>
+                            <li class="list-group-item">Review feedback on Project D</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow-sm">
+                    <div class="card-header">Recent Activities</div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Activity</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024-12-26</td>
+                                    <td>Called Lead X</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-12-25</td>
+                                    <td>Meeting with Client Y</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-12-24</td>
+                                    <td>Email Campaign</td>
+                                    <td>Completed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

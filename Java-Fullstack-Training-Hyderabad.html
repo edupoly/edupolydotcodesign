@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Training in Hyderabad</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .card h3 {
+            font-size: 2rem;
+        }
+        .card p {
+            font-size: 1.1rem;
+        }
+        .bg1{
+            background-image: url('./10.png');
+            background-position: center;
+            background-size: cover;
+        }
+        #tools img{
+            width:10rem;
+            padding:20px;
+        }
+        @media screen and (max-width:720px) {
+            .header *{
+                color:white;
+            }
+            p,li{
+                font-size: small !important;
+            }
+            .btn{
+                padding: 0px 5px !important;
+                margin: 2px 10px !important;
+            }
+        }
+        .achievement-block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .achievement-item {
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+      padding: 10px 20px;
+    }
+    .achievement-separator {
+      width: 1px;
+      background-color: #dee2e6;
+      height: 50px;
+      margin: 0 15px;
+    }
+    @media (max-width: 576px) {
+      .achievement-block {
+        flex-direction: column;
+      }
+      .achievement-separator {
+        width: 80%;
+        height: 1px;
+        margin: 15px 0;
+      }
+    }
+    .company-logo {
+      max-width: 100%;
+      max-height: 60px;
+      object-fit: contain;
+      margin: auto;
+      padding:10px;
+    }
+    .cardwrapper{
+        overflow-y: hidden;
+    }
+    .cardwrapper img:hover{
+        transform: scale(1.1);
+        transition: 1s;
+    }
+    .chart-container {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            height:350px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/fullstack-training-hyderabad.png" width="150" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Courses
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/ReactJS-training-hyderabad.html">ReactJS</a></li>
+                          <li><a class="dropdown-item" href="/Angular Training Hyderabad.html">Angular</a></li>
+                          <li><a class="dropdown-item" href="/MERN-stack-Training-Hyderabad.html">MERN Stack</a></li>
+                          <li><a class="dropdown-item" href="/MEAN-stack-Training-Hyderabad.html">MEAN Stack</a></li>
+                          <li><a class="dropdown-item" href="/Javascript-training-hyderabad.html">Javascript</a></li>
+                          <li><a class="dropdown-item" href="/Python-Training-Hyderabad.html">Python FullStack</a></li>
+                          <li><a class="dropdown-item" href="/Java-Fullstack-Training-Hyderabad.html">Java FullStack</a></li>
+                          <li><a class="dropdown-item" href="/AWS-Devops-Training-Hyderabad.html">AWS with Devops</a></li>
+                          <li><a class="dropdown-item" href="/Devops-Training-Hyderabad.html">Devops</a></li>
+                          <li><a class="dropdown-item" href="/AWS-Devops-Training-Hyderabad.html">AWS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg1 text-white text-center py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>Industry Ready <br>Angular Training in Hyderabad</h1>
+                    <p class="lead">By Industry Experts for Industry Standards <br> from scratch 
+                        to build dynamic web applications
+                    </p>
+                    <div class="row">
+                        <div class="col-6">
+                            <ol class="text-start  list-unstyled ps-0">
+                                <li class="p-1"><i class="bi bi-bullseye me-2"></i>In-depth technical coverage</li>
+                                <li class="p-1"><i class="bi bi-bullseye me-2"></i>100% Practical Hands-on</li>
+                                <li class="p-1"><i class="bi bi-bullseye me-2"></i>Resume & Interview Preperation</li>
+                                <li class="p-1"><i class="bi bi-bullseye me-2"></i>1000+ Assignments Projects</li>
+                                <li class="p-1"><i class="bi bi-bullseye me-2"></i>10+ Capstone Real-time Projects</li>
+                            </ol>
+                        </div>
+                        <div class="col-6">
+                            <ul class="text-start list-unstyled">
+                                <li class="p-1 fw-bold"><i class="bi bi-check-circle-fill me-2"></i>GIT and Cloud Deployment</li>
+                                <li class="p-1 fw-bold"><i class="bi bi-check-circle-fill me-2"></i>Debugging & Problem Solving</li>
+                                <li class="p-1 fw-bold"><i class="bi bi-check-circle-fill me-2"></i>45+ Hrs Live Sessions</li>
+                                <li class="p-1 fw-bold"><i class="bi bi-check-circle-fill me-2"></i>100+ Extended Recordings</li>
+                                <li class="p-1 fw-bold"><i class="bi bi-check-circle-fill me-2"></i>Assessments and Certification</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex flex-column align-items-center">
+                    <img src="Java-fullstack-training-hyderabad.png" class="w-100 p-2" alt="">
+                    <a href="#enroll">
+                        <span class="btn btn-light p-2">Enroll Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-5">
+        <div class="container">
+          <div class="achievement-block">
+            <!-- Google Ratings -->
+            <div class="achievement-item">
+              <h3 class="text-primary">4.9</h3>
+              <p>Google Ratings</p>
+            </div>
+            <div class="achievement-separator"></div>
+    
+            <!-- Students Enrolled -->
+            <div class="achievement-item">
+              <h3 class="text-primary">12,000+</h3>
+              <p>Students Enrolled</p>
+            </div>
+            <div class="achievement-separator"></div>
+    
+            <!-- Companies Recruited -->
+            <div class="achievement-item">
+              <h3 class="text-primary">300+</h3>
+              <p>Companies Recruited</p>
+            </div>
+            <div class="achievement-separator"></div>
+    
+            <!-- Average Salary -->
+            <div class="achievement-item">
+              <h3 class="text-primary">$70,000</h3>
+              <p>Average Salary Achieved</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-light py-5">
+        <div class="container-fluid">
+          <div class="text-center mb-4">
+            <h2 class="fw-bold">Our Alumni Students work at</h2>
+            <p class="text-muted">We are proud to have our students placed in some of the leading organizations worldwide.</p>
+          </div>
+          <div class="row justify-content-center">
+            <!-- Add logos in a grid -->
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="epam_logo_light.svg" alt="Company 1" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="Cognizant_logo_2022.png" alt="Company 1" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="dassault.png" alt="Company 2" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="datagrid.png" alt="Company 3" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="west agile.png" alt="Company 4" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="infinitylogo3.png" alt="Company 5" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="c360.png" alt="Company 6" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="allentics.jpg" alt="Company 6" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="merit-logo.webp" alt="Company 6" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="syntel.png" alt="Company 6" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="TRST01.png" alt="Company 6" class="company-logo">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+              <img src="whitehat-logo.svg" alt="Company 6" class="company-logo">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="outcomes" class="py-5">
+        <h2 class="text-center fw-bold">Key Take aways from our Training</h2>
+        <ul class="d-flex flex-wrap list-unstyled justify-content-evenly bg-white text-white">
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>Single Page Application Development</li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>Refactored and Reusable Components</li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>Debugging and Error Handling</li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>State Management and prop drilling</li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>React Hooks and Custom Hooks</li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>Performance Enhanced Application Dev</li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>Industry Standard Best Practice</li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>CI/CD Pipeline with GIT and AWS</li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>Redux with Toolkit based Development</li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>Latest Form Handling Techniques</li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>Very Strong Javascript </li>
+            <li class="p-3 shadow  m-3 rounded fw-bold bg-success d-flex align-items-center"><i class="bi bi-pin-angle-fill fs-3 me-3"></i>Typescript Based Development</li>
+        </ul>
+      </section>
+      <section id="tools" class="bg-light py-5">
+        <h2 class="text-center fw-bold">Best Practices Tools and Platforms</h2>
+        <ul class="list-unstyled d-flex flex-wrap justify-content-evenly">
+            <li><img src="vite logo.png" alt="" class=""></li>
+            <li><img src="nextjs logo.png" alt="" class=""></li>
+            <li><img src="aws logo.png" alt="" class=""></li>
+            <li><img src="git logo.png" alt="" class=""></li>
+            <li><img src="docker logo.png" alt="" class=""></li>
+            <li><img src="materialui logo.png" alt="" class=""></li>
+            <li><img src="reduxtoolkit logo.png" alt="" class=""></li>
+            <li><img src="formiklogo.png" alt="" class=""></li>
+            <li><img src="reactrouter logo.png" alt="" class=""></li>
+        </ul>
+      </section>
+      <section id="courseware" class="bg-dark py-5">
+        <h1 class="text-light text-center">Course Resources</h1>
+        <div class="row p-5">
+            <div class="card mb-3 col-xl-12">
+                <div class="row g-0">
+                  <div class="col-md-9">
+                    <div class="card-body">
+                        <h3 class="card-title">Updated, Simplified and Step by Step Resource Material</h3>
+                        <p class="card-text">
+                            <ol class="list-unstyled">
+                                <li><i class="bi bi-magic pe-4 fs-5"></i>Ensures learners are exposed to relevant information that aligns with the present context, technology, or methodologies.</li>
+                                <li><i class="bi bi-magic pe-4 fs-5"></i>Helps learners grasp ideas quickly and effectively, especially beginners or those without technical backgrounds.</li>
+                                <li><i class="bi bi-magic pe-4 fs-5"></i>Ensures a logical flow, making it easier to follow instructions or understand complex topics.</li>
+                                <li><i class="bi bi-magic pe-4 fs-5"></i>Ideal tutorials for problem-solving and practical tasks.</li>
+                            </ol>
+                        </p>
+                        <h4>Edupoly Provide the following in Course Time?</h4>
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                                Latest syllabus or curriculum changes.
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">Recent developments in technology, research, or industry standards.</button>
+                            <button type="button" class="list-group-item list-group-item-action">Updated figures, data, or case studies in research.</button>
+                            <button type="button" class="list-group-item list-group-item-action">Revised manuals or instructions to comply with new guidelines.</button>
+                            <button type="button" class="list-group-item list-group-item-action">Problem-solving techniques</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 d-flex align-items-center justify-content-center">
+                    <img src="Complete Study Material.png" width="80%" class="img-fluid rounded-start" alt="...">
+                  </div>
+                </div>
+            </div>
+            <div class="card mb-3 col-xl-12">
+                <div class="row g-0">
+                  <div class="col-md-9">
+                    <div class="card-body">
+                        <h3 class="card-title">Interview Questions</h3>
+                        <p class="card-text">
+                            <ol>
+                                <li>How to answer the interview question is the most important part of of training on daily basis</li>
+                                <li>Actual expectation behind the interview question will be discussed in our sessions</li>
+                                <li>What level of depth must be explained in the interview will be trained in the course</li>
+                            </ol>
+                        </p>
+                        <h4>Edupoly Provide the following in Course Time?</h4>
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                                Material and videos will be provided for the interview questions.
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">Latest and trending interview questions will be provided</button>
+                            <button type="button" class="list-group-item list-group-item-action">Necessary Examples will be discussed in the sessions</button>
+                            <button type="button" class="list-group-item list-group-item-action">Related interview questions are grouped and discussed based on the topic</button>
+                            <button type="button" class="list-group-item list-group-item-action">Seperate Practical and Conceptual Questions are provided</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 d-flex align-items-center justify-content-center">
+                    <img src="interview questions.png" width="80%" class="img-fluid rounded-start" alt="...">
+                  </div>
+                </div>
+            </div>
+            <div class="card mb-3 col-xl-12">
+                <div class="row g-0">
+                  <div class="col-md-9">
+                    <div class="card-body">
+                        <h3 class="card-title">Major Projects</h3>
+                        <p class="card-text">
+                            <ol>
+                                <li>Explaination about your Project in the interview is Crucial. </li>
+                                <li>Our projects cover All the concepts and techniques of the Course</li>
+                                <li>Major projects makes you confortable at the time of JOB </li>
+                                <li>Projects give you Right approach to meet the industry expectations </li>
+                                <li>Implemented with Design Patterns and Best Practices Projects give edge in short listing Profiles</li>
+                            </ol>
+                        </p>
+                        <h4>Edupoly Provide the following in Course Time?</h4>
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                                Material and videos will be provided for the interview questions.
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">Latest and trending interview questions will be provided</button>
+                            <button type="button" class="list-group-item list-group-item-action">Necessary Examples will be discussed in the sessions</button>
+                            <button type="button" class="list-group-item list-group-item-action">Related interview questions are grouped and discussed based on the topic</button>
+                            <button type="button" class="list-group-item list-group-item-action">Seperate Practical and Conceptual Questions are provided</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 d-flex align-items-center justify-content-center">
+                    <img src="main project.png" width="80%" class="img-fluid rounded-start" alt="...">
+                  </div>
+                </div>
+            </div>
+            <div class="card mb-3 col-xl-12">
+                <div class="row g-0">
+                  <div class="col-md-9">
+                    <div class="card-body">
+                        <h3 class="card-title">Capstone Mini Projects</h3>
+                        <p class="card-text">
+                            <ol>
+                                <li>Greatly helps you to Understand the depth of each Concept </li>
+                                <li>Gives you the clarity of different techniques of every topic</li>
+                                <li>Helps you to understand the relativity between concepts and techniques</li>
+                                <li>Improves the syntactical comfort with ease</li>
+                                <li>Implementation of complex concepts with step by step approach </li>
+                            </ol>
+                        </p>
+                        <h4>Edupoly Provide the following in Course Time?</h4>
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                                More than 100 Mini projects(Capstone projects) are provided
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">Structured the flow with clear roadmap </button>
+                            <button type="button" class="list-group-item list-group-item-action">Our projects designed to learn along with project</button>
+                            <button type="button" class="list-group-item list-group-item-action">Minimalistic approach helps you to resolve the confusion over Need of each concept </button>
+                            <button type="button" class="list-group-item list-group-item-action">Brings you more command over debugging and problem solving</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 d-flex align-items-center justify-content-center">
+                    <img src="main project.png" width="80%" class="img-fluid rounded-start" alt="...">
+                  </div>
+                </div>
+            </div>
+            <div class="card mb-3 col-xl-12">
+                <div class="row g-0">
+                  <div class="col-md-9">
+                    <div class="card-body">
+                        <h3 class="card-title">Code Base and Class Recordings</h3>
+                        <p class="card-text">
+                            <ol>
+                                <li>Helps you to refer the code to minimise the searching time</li>
+                                <li>Best Practices can be implemented in the future problems</li>
+                                <li>Greatly useful in the Interview Time for Quick look</li>
+                                <li>Design Patterns and Principles are easily identified</li>
+                                <li>Related problems can be quickly resolved </li>
+                            </ol>
+                        </p>
+                        <h4>Edupoly Provide the following in Course Time?</h4>
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                                Our Github Repositories,Stackblitz and Sandbox are shared with over 200+ repos and 1000+ code snippets
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">Every Session Recording will be provided for Reference to Batch Members only</button>
+                            <button type="button" class="list-group-item list-group-item-action">For more practice we give access to our other batch projects</button>
+                            <button type="button" class="list-group-item list-group-item-action">Code management and Linting can be resolved with ease</button>
+                            <button type="button" class="list-group-item list-group-item-action">Professional way of managing code will be practiced with the codebase</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 d-flex align-items-center justify-content-center">
+                    <img src="main project.png" width="80%" class="img-fluid rounded-start" alt="...">
+                  </div>
+                </div>
+            </div>
+            <div class="card mb-3 col-xl-12">
+                <div class="row g-0">
+                  <div class="col-md-9">
+                    <div class="card-body">
+                        <h3 class="card-title">Mock Interviews and Daily Interview Questions Discussion</h3>
+                        <p class="card-text">
+                            <ol>
+                                <li>Expressing the concept is the most essential in Interviews</li>
+                                <li>Understanding the Question and indepth ways of explenation is Critical</li>
+                                <li>Expected answer of the interviewer should be identified and delivered</li>
+                                <li>Demonstrating the Practical scenarios of the given question needed</li>
+                                <li>Helps you to bring the confidence and flow in the interviews</li>
+                            </ol>
+                        </p>
+                        <h4>Edupoly Provide the following in Course Time?</h4>
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                                Question first approach in our every session help you the possible questions on every Topic
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">We Guide you to drive the interview in your favourable ways in your comfortable areas</button>
+                            <button type="button" class="list-group-item list-group-item-action">Mistakes are resolved in the session time to have longer impact on answers</button>
+                            <button type="button" class="list-group-item list-group-item-action">We conduct In session discussions to learn from other's mistakes and corrections</button>
+                            <button type="button" class="list-group-item list-group-item-action">Regular feedback collection from our old students and industry experts helped many</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 d-flex align-items-center justify-content-center">
+                    <img src="main project.png" width="80%" class="img-fluid rounded-start" alt="...">
+                  </div>
+                </div>
+            </div>
+            <div class="card mb-3 col-xl-12">
+                <div class="row g-0">
+                  <div class="col-md-9">
+                    <div class="card-body">
+                        <h3 class="card-title">Latest Updates</h3>
+                        <p class="card-text">
+                            <ol>
+                                <li>Technologies give new versions almost in every 6 months and must get updated</li>
+                                <li>Getting Job on Latest Technology gives you more time in the job and advantage</li>
+                                <li>Good to Observe and learn updates of Associated libraries</li>
+                                <li>New best practices and design patterns should be adopted</li>
+                            </ol>
+                        </p>
+                        <h4>Edupoly Provide the following in Course Time?</h4>
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                                We train the latest updates almost as it released
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">Practical Scenarios of the latest updates are demonstrated with Projects</button>
+                            <button type="button" class="list-group-item list-group-item-action">We discuss with old technology with latest with respect to performance, reliability and robustness</button>
+                            <button type="button" class="list-group-item list-group-item-action">Edupoly known for providing the latest with minimalistic approach projects to advanced Projects </button>
+                            <button type="button" class="list-group-item list-group-item-action">We deliver the compatibility issues and platform problems in the course duration</button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 d-flex align-items-center justify-content-center">
+                    <img src="main project.png" width="80%" class="img-fluid rounded-start" alt="...">
+                  </div>
+                </div>
+            </div>
+
+            
+        </div>
+      </section>
+      
+      <section id="projects" class="py-5 bg-light">
+        <h2 class="text-center fw-bold text-dark">Latest Projects from Our Course</h2>
+        <div class=" d-flex flex-wrap justify-content-evenly">
+            <div class="card" style="width: 25rem;">
+                <div class="cardwrapper">
+                    <img src="finserv project.png" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 25rem;">
+                <div class="cardwrapper">
+                    <img src="PolyCRM project.png" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 25rem;">
+                <div class="cardwrapper">
+                    <img src="memory game.png" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+      </section>
+    <section id="overview" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Why Learn ReactJS?</h2>
+                    <p>ReactJS is a popular JavaScript library for building user interfaces. It allows developers to create large web applications that can update and render efficiently in response to data changes.</p>
+                    <ul>
+                        <li>Highly in-demand skill</li>
+                        <li>Build scalable and fast web applications</li>
+                        <li>Supported by a vibrant community</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <canvas id="salaryChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <canvas id="opportinities"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex ">
+                    <div class="chart-container">
+                        <canvas id="linechart"></canvas>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="curriculum" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Course Curriculum</h2>
+            <div class="accordion" id="curriculumAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Module 1: Introduction to ReactJS
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>What is ReactJS?</li>
+                                <li>Setting up the environment</li>
+                                <li>Understanding JSX</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Module 2: Components and Props
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Functional and Class Components</li>
+                                <li>Props and PropTypes</li>
+                                <li>Composing Components</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Module 3: State and Lifecycle
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Understanding State</li>
+                                <li>Lifecycle Methods</li>
+                                <li>State Management Techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="instructors" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Meet Your Instructors</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Instructor 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="card-text">10+ years of experience in front-end development and ReactJS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Instructor 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Jane Smith</h5>
+                            <p class="card-text">Expert in modern JavaScript frameworks and UI/UX design.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Instructor 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Emily Johnson</h5>
+                            <p class="card-text">Specializes in state management and scalable application architecture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="infographics" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">ReactJS Job Opportunities, Salaries, and Popularity</h2>
+            <div class="row">
+                <div class="col-lg-4 text-center">
+                    <img src="https://via.placeholder.com/300x300" class="img-fluid mb-3" alt="Job Opportunities">
+                    <h5>Job Opportunities</h5>
+                    <p>ReactJS developers are in high demand, with thousands of job openings worldwide.</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="https://via.placeholder.com/300x300" class="img-fluid mb-3" alt="Salaries">
+                    <h5>Salaries</h5>
+                    <p>The average salary for a ReactJS developer is $100,000+ per year.</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="https://via.placeholder.com/300x300" class="img-fluid mb-3" alt="Popularity">
+                    <h5>Popularity</h5>
+                    <p>ReactJS is one of the most widely used JavaScript libraries with a strong community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="enroll" class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h2>Ready to Start?</h2>
+            <p>Enroll now and take the first step towards mastering ReactJS!</p>
+            <a href="#" class="btn btn-light btn-lg">Enroll Now</a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 ReactJS Training Course. All Rights Reserved.</p>
+    </footer>
+    <script>
+        const ctx = document.getElementById('salaryChart').getContext('2d');
+
+        // Data for the chart
+        const years = ['2020', '2021', '2022', '2023','2024'];
+        const salaryHikes = [50000, 35000, 60000, 85000, 100000];
+
+        // Creating the bar chart
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: years,
+                datasets: [{
+                    label: 'Average Salary (USD)',
+                    data: salaryHikes,
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 99, 132, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `$${context.raw}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Salary (USD)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        const ctx2 = document.getElementById('opportinities').getContext('2d');
+
+        // Data for the chart
+        const years2 = ['2019', '2020', '2021', '2022', '2023'];
+        const salaryHikes2 = [50000, 55000, 60000, 65000, 70000];
+
+        // Creating the pie chart
+        new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: years2,
+                datasets: [{
+                    label: 'Average Salary (USD)',
+                    data: salaryHikes2,
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 99, 132, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.label}: $${context.raw}`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        const ctx3 = document.getElementById('linechart').getContext('2d');
+
+        // Data for the chart
+        const years3 = ['2020', '2021', '2022', '2023','2024'];
+        const salaryData3 = {
+            ReactJS: [30000, 55000, 60000, 65000, 100000],
+            Angular: [38000, 42000, 50000, 43000, 78000],
+            Java: [25000, 38000, 39000, 47000, 52000],
+            Python: [13000, 33000, 41000, 46000, 59000],
+            ".NET": [9000, 3000, 19000, 64000, 69000]
+        };
+
+        // Creating the line chart
+        new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: years3,
+                datasets: [
+                    {
+                        label: 'ReactJS',
+                        data: salaryData3.ReactJS,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Angular',
+                        data: salaryData3.Angular,
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Java',
+                        data: salaryData3.Java,
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Python',
+                        data: salaryData3.Python,
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        tension: 0.4
+                    },
+                    {
+                        label: '.NET',
+                        data: salaryData3[".NET"],
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.dataset.label}: $${context.raw}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Salary (USD)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
