@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Eduport - LMS, Education and Course Theme</title>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="Webestica.com" />
+  <meta name="description" content="Eduport- LMS, Education and Course Theme" />
+
+  <!-- Dark mode -->
+  <script>
+    const storedTheme = localStorage.getItem("theme");
+
+    const getPreferredTheme = () => {
+      if (storedTheme) {
+        return storedTheme;
+      }
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    };
+
+    const setTheme = function (theme) {
+      if (
+        theme === "auto" &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.setAttribute("data-bs-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-bs-theme", theme);
+      }
+    };
+
+    setTheme(getPreferredTheme());
+
+    window.addEventListener("DOMContentLoaded", () => {
+      var el = document.querySelector(".theme-icon-active");
+      if (el != "undefined" && el != null) {
+        const showActiveTheme = (theme) => {
+          const activeThemeIcon = document.querySelector(
+            ".theme-icon-active use"
+          );
+          const btnToActive = document.querySelector(
+            `[data-bs-theme-value="${theme}"]`
+          );
+          const svgOfActiveBtn = btnToActive
+            .querySelector(".mode-switch use")
+            .getAttribute("href");
+
+          document
+            .querySelectorAll("[data-bs-theme-value]")
+            .forEach((element) => {
+              element.classList.remove("active");
+            });
+
+          btnToActive.classList.add("active");
+          activeThemeIcon.setAttribute("href", svgOfActiveBtn);
+        };
+
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", () => {
+            if (storedTheme !== "light" || storedTheme !== "dark") {
+              setTheme(getPreferredTheme());
+            }
+          });
+
+        showActiveTheme(getPreferredTheme());
+
+        document
+          .querySelectorAll("[data-bs-theme-value]")
+          .forEach((toggle) => {
+            toggle.addEventListener("click", () => {
+              const theme = toggle.getAttribute("data-bs-theme-value");
+              localStorage.setItem("theme", theme);
+              setTheme(theme);
+              showActiveTheme(theme);
+            });
+          });
+      }
+    });
+  </script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" />
+
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="./assets/index.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#nav-scroll">
+  <!-- Header START -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/assets/fullstack-training-hyderabad.png" width="150" alt="ReactJS Training in Hyderabad">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Courses
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/ReactJS-training-hyderabad.html">ReactJS</a></li>
+                      <li><a class="dropdown-item" href="/Angular-Training-Hyderabad.html">Angular</a></li>
+                      <li><a class="dropdown-item" href="/MERN-fullstack-Training-Hyderabad.html">MERN Stack</a></li>
+                      <li><a class="dropdown-item" href="/MEAN-fullstack-Training-Hyderabad.html">MEAN Stack</a></li>
+                      <!-- <li><a class="dropdown-item" href="/Javascript-training-hyderabad.html">Javascript</a></li> -->
+                      <li><a class="dropdown-item" href="/Python-Training-Hyderabad.html">Python FullStack</a></li>
+                      <!-- <li><a class="dropdown-item" href="/Java-Fullstack-Training-Hyderabad.html">Java FullStack</a></li>
+                      <li><a class="dropdown-item" href="/AWS-Devops-Training-Hyderabad.html">AWS with Devops</a></li>
+                      <li><a class="dropdown-item" href="/Devops-Training-Hyderabad.html">Devops</a></li>
+                      <li><a class="dropdown-item" href="/AWS-Devops-Training-Hyderabad.html">AWS</a></li> -->
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" target="_blank" href="https://github.com/edupoly/edupolydotcocontent">Practice</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  <!-- Header END -->
+
+  <!-- **************** MAIN CONTENT START **************** -->
+  <main>
+
+
+    <!-- =======================
+Page Content START -->
+    <section>
+      <div class="container" data-sticky-container>
+        <div class="row g-4">
+          <!-- Left side START -->
+          <div class="col-md-3">
+            <div data-sticky data-margin-top="80" data-sticky-for="576">
+              <div id="nav-scroll" class="navbar">
+                <!-- <nav class="nav nav-pills nav-pill-soft flex-column">
+                  <a class="nav-link" href="#item-1"><i class="bi bi-emoji-smile fa-fw me-2"></i>Get
+                    Started</a>
+                  <a class="nav-link" href="#item-2"><i class="bi bi-layers fa-fw me-2"></i>Account Setup</a>
+                  <a class="nav-link" href="#item-3"><i class="bi bi-info-circle fa-fw me-2"></i>Other
+                    Topics</a>
+                  <a class="nav-link" href="#item-4"><i class="bi bi-house fa-fw me-2"></i>Advance Usage</a>
+                </nav> -->
+                <img src="./assets/shield copy.png">
+              </div>
+            </div>
+          </div>
+          <!-- Left side END -->
+
+          <!-- Right side START -->
+          <div class="col-md-9">
+            <div class="nav-scroll" data-bs-spy="scroll" data-bs-target="#nav-scroll" data-bs-smooth-scroll="true"
+              tabindex="0">
+              <!-- Get Started content START -->
+              <div id="item-1">
+                <div class="card bg-transparent">
+                  <!-- Article title -->
+                  <div class="card-header bg-transparent border-bottom py-0 px-0">
+                    <h2>Privacy policy</h2>
+                  </div>
+                  <!-- Article Info -->
+                  <div class="card-body px-0 pb-0">
+                    <p>
+                      We at Edupoly Solutions Private Limited ("Edupoly", "we", "us") respect your privacy and want you
+                      to understand how we collect, use, and share data about you. This Privacy Policy covers our data
+                      collection practices and describes your rights to access, correct, or restrict our use of your
+                      personal data.
+                    </p>
+
+                    <p>
+                      Unless we link to a different policy or state otherwise, this Privacy Policy applies when you
+                      visit or use the Edupoly website, mobile applications, APIs or related services (the "Services").
+                    </p>
+
+                    <p>
+                      The data controller for all data collected from you with regards to your use of the Services is
+                      Edupoly Solutions Private Limited, a private company registered in India, with the registered
+                      office at 372, HMT Hills Rd, Addagutta Society, Jal Vayu Vihar, Kukatpally, Hyderabad, Telangana -
+                      500085. You can get in touch with our privacy team at info.edupoly@gmail.com
+                    </p>
+
+                    <p>
+                      By using the Services, you agree to the terms of this Privacy Policy. You shouldn't use the
+                      Services if you don't agree with this Privacy Policy or any other agreement that governs your use
+                      of the Services.
+                    </p>
+
+                    <h4 class="mt-4">What data we collect</h4>
+                    <p>We collect certain data from you directly, like the information you enter yourself, data about
+                      your participation in courses, and data from third-party platforms you connect with Edupoly. When
+                      you register with us, you provide us with personal information that includes your name, email and
+                      phone number.</p>
+
+
+                    <h4 class="mt-4">How we use your data</h4>
+
+                    <p>We use your data to do things like provide our Services, communicate with you, troubleshoot
+                      issues, secure against fraud and abuse, improve and update our Services, analyze how people use
+                      our Services, serve personalized advertising, and as required by law or necessary for safety and
+                      integrity.</p>
+                    <p><strong>We use the data we collect through your use of the Services to:</strong></p>
+                    <ul>
+                      <li>Provide and administer the Services, including to display customized content and facilitate communication with other users;</li>
+                      <li>Process your requests and orders for programs, courses, specific services, information, or features;</li>
+                      <li>Communicate with you about your account by:
+                      <ul>
+                      <li>Responding to your questions and concerns;</li>
+                      <li>Sending you administrative messages and information, including messages from instructors and teaching assistants, notifications about changes to our Service, and updates to our agreements;</li>
+                      <li>Sending you information and in-app messages about your progress in courses, feedback about the course, referral / reward programs, new services, new features, promotions, newsletters, and other available courses (which you can opt out of at any time);</li>
+                      </ul>
+                      </li>
+                      <li>Manage your account preferences;</li>
+                      <li>Facilitate the Services’ technical functioning, including troubleshooting and resolving issues, securing the Services, and preventing fraud and abuse;</li>
+                      <li>Solicit feedback from users;</li>
+                      </ul>
+
+                    <!-- Divider -->
+                    <div class="text-center h5 my-5">. . .</div>
+                  </div>
+                </div>
+                <!-- Right side END -->
+              </div>
+            </div>
+    </section>
+    <!-- =======================
+Page Content END -->
+  </main>
+  <!-- **************** MAIN CONTENT END **************** -->
+
+  <!-- =======================
+    Footer START -->
+  <footer class="py-5 bg-light">
+    <div class="container">
+      <!-- Row START -->
+      <div class="row g-4">
+
+        <!-- Widget 1 START -->
+        <div class="col-lg-3">
+          <!-- logo -->
+          <a class="me-0" href="index.html">
+            <img class="light-mode-item h-40px" src="./assets/edupoly-logo-light.png" alt="logo">
+            <img class="dark-mode-item h-40px" src="./assets/edupoly-logo-dark.png" alt="logo">
+          </a>
+          <p class="my-3">Best learning platform with top end courses. Taught by experts to help you acquire new skills
+            and lead your career.</p>
+          <!-- Social media icon -->
+          <ul class="list-inline mb-0 mt-3">
+            <li class="list-inline-item"> <a class="btn btn-white btn-sm shadow px-2 text-success" target="_blank"
+                href="https://wa.me/+919561214818"><i class="fab fa-fw fa-whatsapp"></i></a> </li>
+            <li class="list-inline-item"> <a class="btn btn-white btn-sm shadow px-2 text-instagram" target="_blank"
+                href="https://instagram.com/edu.poly?igshid"><i class="fab fa-fw fa-instagram"></i></a> </li>
+            <li class="list-inline-item"> <a class="btn btn-white btn-sm shadow px-2 text-youtube" target="_blank"
+                href="https://www.youtube.com/@PraveenClasses?sub_confirmation=1"><i
+                  class="fab fa-fw fa-youtube"></i></a> </li>
+            <li class="list-inline-item"> <a class="btn btn-white btn-sm shadow px-2 text-linkedin" target="_blank"
+                href="https://in.linkedin.com/company/edupoly"><i class="fab fa-fw fa-linkedin-in"></i></a> </li>
+          </ul>
+        </div>
+        <!-- Widget 1 END -->
+
+        <!-- Widget 2 START -->
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <!-- Link block -->
+            <div class="col">
+              <h5 class="mb-2 mb-md-4 text-center">Popular videos</h5>
+              <ul class="nav flex-column align-items-center">
+                <li class="nav-item"><a class="nav-link" target="_blank" href="https://youtu.be/MZAT1W7IAZ8">CSS
+                    complete course for beginners</a></li>
+                <li class="nav-item"><a class="nav-link" target="_blank" href="https://youtu.be/BeKLiRgokhk">JS Promises
+                    and AJAX</a></li>
+                <li class="nav-item"><a class="nav-link" target="_blank" href="https://youtu.be/mhKRZO1auu4">ReactJS
+                    redux foundation</a></li>
+                <li class="nav-item"><a class="nav-link" target="_blank"
+                    href="https://youtube.com/playlist?list=PL9LrrAXIZDavMNcT55HAAEwomun1-Ylvs">HTTP CRUD operations in
+                    Angular</a></li>
+                <li class="nav-item"><a class="nav-link" target="_blank"
+                    href="https://youtube.com/playlist?list=PL9LrrAXIZDasrWXAYQvNHrVcGXBTUSchI">Angular E-Commerce
+                    project</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Widget 2 END -->
+
+        <!-- Widget 3 START -->
+        <div class="col-lg-3">
+          <h5 class="mb-2 mb-md-4">Get in touch with us</h5>
+          <!-- Time -->
+          <p class="mb-2">
+            Address:<span class="h6 fw-light ms-2">372, HMT Hills Rd, Addagutta Society, Jal Vayu Vihar,
+              Kukatpally, Hyderabad, Telangana 500085</span>
+            <span class="d-block small">(9:AM to 8:PM IST)</span>
+          </p>
+
+          <p class="mb-0">Email:<a class="h6 fw-light ms-2" href="mailto:someone@example.com">info.edupoly@gmail.com</a>
+          </p>
+        </div>
+        <!-- Widget 3 END -->
+      </div><!-- Row END -->
+    </div>
+  </footer>
+  <!-- footer starts -->
+<div class=" bg-light">
+  <div class="d-flex flex-wrap justify-content-around p-3 container">
+      <div>
+          <a href="/privacy-policy.html"><i class="bi bi-shield-check"></i>Privacy Policy</a>
+      </div>
+      <div>&#169;Edupoly Solutions Private Ltd.</div>
+  </div>
+</div>
+<!-- footer ends -->
+  <!-- =======================
+    Footer END -->
+
+  <!-- Back to top -->
+  <div class="back-top">
+    <i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i>
+  </div>
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
