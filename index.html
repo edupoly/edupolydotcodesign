@@ -102,16 +102,62 @@
         <div class="d-flex flex-wrap justify-content-center align-items-center">
             <div>
                 <i class="bi bi-quote"></i>Get Job Ready by <b>Industry Experts</b> with <b> Industry Standards </b>
-                from scratch
+                from
+                scratch
             </div>
-            <div class="bg-primary-subtle p-1 m-2 rounded text-primary" style="width:300px">
-                <a data-bs-toggle="modal" data-bs-target="#contactModal"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSdNKhTFKU0TWAnlemwQTdL-VLEdpYUUOVG8fRQ1V9RWYLNAhA/viewform?embedded=true">
+            <div>
+                <button type="button" class="bg-primary-subtle p-1 m-2 rounded text-primary" style="width:300px"
+                    data-bs-toggle="modal" data-bs-target="#contactModal">
                     Register Free Demo Class
-                </a>
+                </button>
             </div>
         </div>
     </section>
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <form action="https://edupoly.in/myform.php" method="POST">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="name" class="form-label"><b>Full Name</b></label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label"><b>Email Address</b></label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label"><b>Phone Number</b> (optional)</label>
+                            <input type="text" class="form-control" id="phone" name="phone">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label"><b>Subject</b></label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label"><b>Message</b></label>
+                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer p-2">
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success btn-sm">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- Modal -->
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog ">

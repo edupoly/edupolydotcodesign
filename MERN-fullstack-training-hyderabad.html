@@ -18,29 +18,35 @@
             <a class="navbar-brand" href="/">
                 <img src="/assets/fullstack-training-hyderabad.png" width="150" alt="ReactJS Training in Hyderabad">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Courses
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Courses
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="/ReactJS-training-hyderabad.html">ReactJS</a></li>
-                          <li><a class="dropdown-item" href="/Angular-Training-Hyderabad.html">Angular</a></li>
-                          <li><a class="dropdown-item" href="/MERN-fullstack-training-hyderabad.html">MERN Stack</a></li>
-                          <li><a class="dropdown-item" href="/MEAN-fullstack-Training-Hyderabad.html">MEAN Stack</a></li>
-                          <!-- <li><a class="dropdown-item" href="/Javascript-training-hyderabad.html">Javascript</a></li> -->
-                          <li><a class="dropdown-item" href="/Python-Training-Hyderabad.html">Python FullStack</a></li>
-                          <!-- <li><a class="dropdown-item" href="/Java-Fullstack-Training-Hyderabad.html">Java FullStack</a></li>
+                            <li><a class="dropdown-item" href="/ReactJS-training-hyderabad.html">ReactJS</a></li>
+                            <li><a class="dropdown-item" href="/Angular-Training-Hyderabad.html">Angular</a></li>
+                            <li><a class="dropdown-item" href="/MERN-fullstack-training-hyderabad.html">MERN Stack</a>
+                            </li>
+                            <li><a class="dropdown-item" href="/MEAN-fullstack-Training-Hyderabad.html">MEAN Stack</a>
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="/Javascript-training-hyderabad.html">Javascript</a></li> -->
+                            <li><a class="dropdown-item" href="/Python-Training-Hyderabad.html">Python FullStack</a>
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="/Java-Fullstack-Training-Hyderabad.html">Java FullStack</a></li>
                           <li><a class="dropdown-item" href="/AWS-Devops-Training-Hyderabad.html">AWS with Devops</a></li>
                           <li><a class="dropdown-item" href="/Devops-Training-Hyderabad.html">Devops</a></li>
                           <li><a class="dropdown-item" href="/AWS-Devops-Training-Hyderabad.html">AWS</a></li> -->
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" target="_blank" href="https://github.com/edupoly/edupolydotcocontent">Practice</a></li>
+                    <li class="nav-item"><a class="nav-link" target="_blank"
+                            href="https://github.com/edupoly/edupolydotcocontent">Practice</a></li>
 
                 </ul>
             </div>
@@ -77,7 +83,7 @@
 
                             </ul>
                         </div>
-                      
+
                     </div>
                 </div>
                 <div class="col-lg-6 d-flex flex-column align-items-center">
@@ -86,30 +92,79 @@
             </div>
         </div>
     </header>
-      <section id="fixedFooter" class="p-2 bg-dark text-light text-center fs-4 fixed-bottom">
-            <div class="d-flex flex-wrap justify-content-center align-items-center">
-                <div>
-                    <i class="bi bi-quote"></i>Get Job Ready by <b>Industry Experts</b> with <b> Industry Standards </b> from scratch 
-                </div>
-                <div class="bg-primary-subtle p-1 m-2 rounded text-primary" style="width:300px">
-                    <a data-bs-toggle="modal" data-bs-target="#contactModal" href="https://docs.google.com/forms/d/e/1FAIpQLSdNKhTFKU0TWAnlemwQTdL-VLEdpYUUOVG8fRQ1V9RWYLNAhA/viewform?embedded=true">
-                        Register Free Demo Class
-                    </a>
-                </div>
+    <section id="fixedFooter" class="p-2 bg-dark text-light text-center fs-4 fixed-bottom">
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+            <div>
+                <i class="bi bi-quote"></i>Get Job Ready by <b>Industry Experts</b> with <b> Industry Standards </b>
+                from
+                scratch
             </div>
+            <div>
+                <button type="button" class="bg-primary-subtle p-1 m-2 rounded text-primary" style="width:300px"
+                    data-bs-toggle="modal" data-bs-target="#contactModal">
+                    Register Free Demo Class
+                </button>
+            </div>
+        </div>
     </section>
-      <!-- Modal -->
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true" >
-        <div class="modal-dialog "  >
-            <div class="modal-content" >
-                <div class="modal-header" >
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <form action="https://edupoly.in/myform.php" method="POST">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="name" class="form-label"><b>Full Name</b></label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label"><b>Email Address</b></label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label"><b>Phone Number</b> (optional)</label>
+                            <input type="text" class="form-control" id="phone" name="phone">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label"><b>Subject</b></label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label"><b>Message</b></label>
+                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer p-2">
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success btn-sm">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
                     <h1 class="modal-title fs-5" id="contactModalLabel">Edupoly - Contact Us</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" style="height:600px;">
                     <iframe class="contactModal"
                         src="https://docs.google.com/forms/d/e/1FAIpQLSdNKhTFKU0TWAnlemwQTdL-VLEdpYUUOVG8fRQ1V9RWYLNAhA/viewform?embedded=true"
-                        frameborder="0" marginheight="0" marginwidth="0" style="width:100%; height:100%;">Loading…</iframe>
+                        frameborder="0" marginheight="0" marginwidth="0"
+                        style="width:100%; height:100%;">Loading…</iframe>
                 </div>
             </div>
         </div>
@@ -162,42 +217,42 @@
             <div class="row justify-content-center">
                 <!-- Add logos in a grid -->
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/epam_logo_light.svg" alt="Company 1" class="company-logo">
+                    <img src="/assets/epam_logo_light.svg" alt="Company 1" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/Cognizant_logo_2022.png" alt="Company 1" class="company-logo">
+                    <img src="/assets/Cognizant_logo_2022.png" alt="Company 1" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/dassault.png" alt="Company 2" class="company-logo">
+                    <img src="/assets/dassault.png" alt="Company 2" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/datagrid.png" alt="Company 3" class="company-logo">
+                    <img src="/assets/datagrid.png" alt="Company 3" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/west agile.png" alt="Company 4" class="company-logo">
+                    <img src="/assets/west agile.png" alt="Company 4" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/infinitylogo3.png" alt="Company 5" class="company-logo">
+                    <img src="/assets/infinitylogo3.png" alt="Company 5" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/c360.png" alt="Company 6" class="company-logo">
+                    <img src="/assets/c360.png" alt="Company 6" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/allentics.jpg" alt="Company 6" class="company-logo">
+                    <img src="/assets/allentics.jpg" alt="Company 6" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/merit-logo.webp" alt="Company 6" class="company-logo">
+                    <img src="/assets/merit-logo.webp" alt="Company 6" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/syntel.png" alt="Company 6" class="company-logo">
+                    <img src="/assets/syntel.png" alt="Company 6" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/TRST01.png" alt="Company 6" class="company-logo">
+                    <img src="/assets/TRST01.png" alt="Company 6" class="company-logo">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-                  <img src="/assets/whitehat-logo.svg" alt="Company 6" class="company-logo">
+                    <img src="/assets/whitehat-logo.svg" alt="Company 6" class="company-logo">
                 </div>
-              </div>
+            </div>
         </div>
     </section>
     <section id="outcomes" class="py-5">
@@ -207,7 +262,8 @@
                 <i class="bi bi-bricks fs-1 me-3 text-success"></i>Refactored and Reusable Components
             </li>
             <li class="px-3 p-1 shadow col-10 col-md-5 m-3 rounded fs-5 bg-white d-flex align-items-center">
-                <i class="bi bi-bug-fill fs-1 me-3 text-primary"></i>Debugging, Error Handling and Bug Finding</li>
+                <i class="bi bi-bug-fill fs-1 me-3 text-primary"></i>Debugging, Error Handling and Bug Finding
+            </li>
             <li class="px-3 p-1 shadow col-10 col-md-5 m-3 rounded fs-5 bg-white d-flex align-items-center"><i
                     class="bi bi-share-fill fs-1 me-3 text-danger"></i>Props drilling & parent-child communication</li>
             <li class="px-3 p-1 shadow col-10 col-md-5 m-3 rounded fs-5 bg-white d-flex align-items-center"><i
@@ -236,7 +292,7 @@
                     class="bi bi-columns-gap fs-1 me-3 text-success"></i>Material UI and Styled Components for Standard
                 UI</li>
             <li class="px-3 p-1 shadow col-10 col-md-5 m-3 rounded fs-5 bg-white d-flex align-items-center">
-                <i class="bi bi-signpost-2-fill fs-1 me-3 text-primary"></i>Clean and Structured way of API creation 
+                <i class="bi bi-signpost-2-fill fs-1 me-3 text-primary"></i>Clean and Structured way of API creation
             </li>
             <li class="px-3 p-1 shadow col-10 col-md-5 m-3 rounded fs-5 bg-white d-flex align-items-center">
                 <i class="bi bi-file-lock2 fs-1 me-3 text-danger"></i>Authentication and Authorisation
@@ -245,10 +301,12 @@
                 <i class="bi bi-ubuntu fs-1 me-3 text-info"></i>Micro Service Architecture
             </li>
             <li class="px-3 p-1 shadow col-10 col-md-5 m-3 rounded fs-5 bg-white d-flex align-items-center">
-                <i class="bi bi-database-fill-gear fs-1 me-3 text-success"></i>Database Design and Development with NoSQL
+                <i class="bi bi-database-fill-gear fs-1 me-3 text-success"></i>Database Design and Development with
+                NoSQL
             </li>
             <li class="px-3 p-1 shadow col-10 col-md-5 m-3 rounded fs-5 bg-white d-flex align-items-center">
-                <i class="bi bi-database-fill-check fs-1 me-3 text-primary"></i>RDBMS based database design and Optimised Selection
+                <i class="bi bi-database-fill-check fs-1 me-3 text-primary"></i>RDBMS based database design and
+                Optimised Selection
             </li>
         </ul>
     </section>
@@ -361,7 +419,8 @@
     <section class="p-3 bg-light text-center fs-4" id="practicelink">
         <div>
 
-            <i class="bi bi-quote"></i><a href="https://github.com/edupoly/edupolydotcocontent" class="m-2 btn btn-outline-success btn-lg">Click
+            <i class="bi bi-quote"></i><a href="https://github.com/edupoly/edupolydotcocontent"
+                class="m-2 btn btn-outline-success btn-lg">Click
                 Here</a>For Complete List of Projects, Mini Projects, Interview questions and Coding Challenges with
             Practice Assignments
         </div>
@@ -839,7 +898,8 @@
                     </div>
                     <div
                         class="col-md-3 order-md-last order-sm-first order-first d-flex align-items-center justify-content-center">
-                        <img src="/assets/Complete Study Material.png" width="80%" class="img-fluid rounded-start" alt="...">
+                        <img src="/assets/Complete Study Material.png" width="80%" class="img-fluid rounded-start"
+                            alt="...">
                     </div>
                 </div>
             </div>
@@ -877,7 +937,8 @@
                     </div>
                     <div
                         class="col-md-3 order-md-last order-sm-first order-first d-flex align-items-center justify-content-center">
-                        <img src="/assets/interview questions.png" width="80%" class="img-fluid rounded-start" alt="...">
+                        <img src="/assets/interview questions.png" width="80%" class="img-fluid rounded-start"
+                            alt="...">
                     </div>
                 </div>
             </div>
@@ -960,8 +1021,8 @@
                     </div>
                     <div
                         class="col-md-3 order-md-last order-sm-first order-first d-flex align-items-center justify-content-center">
-                        <img src="/assets/Reactjs-training-hyderabad-projects.png" width="80%" class="img-fluid rounded-start"
-                            alt="...">
+                        <img src="/assets/Reactjs-training-hyderabad-projects.png" width="80%"
+                            class="img-fluid rounded-start" alt="...">
                     </div>
                 </div>
             </div>
@@ -1003,8 +1064,8 @@
                     </div>
                     <div
                         class="col-md-3 order-md-last order-sm-first order-first d-flex align-items-center justify-content-center">
-                        <img src="/assets/ReactJS-training-video-recordings.png" width="80%" class="img-fluid rounded-start"
-                            alt="...">
+                        <img src="/assets/ReactJS-training-video-recordings.png" width="80%"
+                            class="img-fluid rounded-start" alt="...">
                     </div>
                 </div>
             </div>
@@ -1090,8 +1151,8 @@
                     </div>
                     <div
                         class="col-md-3 order-md-last order-sm-first order-first d-flex align-items-center justify-content-center">
-                        <img src="/assets/ReactJS-training-hyderabad-updates.png" width="80%" class="img-fluid rounded-start"
-                            alt="...">
+                        <img src="/assets/ReactJS-training-hyderabad-updates.png" width="80%"
+                            class="img-fluid rounded-start" alt="...">
                     </div>
                 </div>
             </div>
@@ -1167,8 +1228,8 @@
         <div class="p-3"></div>
         <div class="p-3 d-lg-none"></div>
         <div class="p-3 d-xl-none"></div>
-      </div>
-      
+    </div>
+
     <script>
         const ctx = document.getElementById('salaryChart').getContext('2d');
 
